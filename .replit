@@ -1,0 +1,13 @@
+modules = ["python-3.12"]
+run = "python face_recognizer.py"
+
+[nix]
+channel = "stable-24_05"
+
+[deployment]
+run = ["sh", "-c", "python face_recognizer.py"]
+
+[[ports]]
+localPort = 8000
+externalPort = 80
+exposeLocalhost = true
